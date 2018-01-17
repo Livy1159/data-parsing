@@ -1,5 +1,11 @@
 require 'csv'
 
+def swap(array, index_1, index_2)
+  temp = array[index_1]
+  array[index_1] = array[index_2]
+  array[index_2] = temp
+end
+
 def create_array
   csv_array = []
 
@@ -22,6 +28,7 @@ def create_array
   csv3 = CSV.read('file3.csv', headers: false)
 
   csv3.each do |row|
+    swap(row, 3, 4)
     csv_array << row
   end
   p csv_array
@@ -29,9 +36,6 @@ end
 
 create_array
 
-# def output_1
-
-# end
 
 
 
