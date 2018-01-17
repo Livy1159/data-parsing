@@ -14,6 +14,7 @@ def create_array
   csv1.each do |row|
     split_array1 = row[0].split(' ')
     split_array1.delete_at(2)
+    split_array1[3].gsub!('-', '/')
     csv_array << split_array1
   end
 
@@ -22,6 +23,8 @@ def create_array
   csv2.each do |row|
     split_array2 = row[0].split('|')
     split_array2.delete_at(2)
+    swap(split_array2, 3, 4)
+    split_array2[3].gsub!('-', '/')
     csv_array << split_array2
   end
 
