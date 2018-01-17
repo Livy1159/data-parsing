@@ -15,6 +15,13 @@ def create_array
     split_array1 = row[0].split(' ')
     split_array1.delete_at(2)
     split_array1[3].gsub!('-', '/')
+    split_array1.each do |item|
+      if item == "F"
+        item.replace("Female")
+      elsif item == "M"
+        item.replace("Male")
+      end 
+    end
     csv_array << split_array1
   end
 
@@ -25,6 +32,13 @@ def create_array
     split_array2.delete_at(2)
     swap(split_array2, 3, 4)
     split_array2[3].gsub!('-', '/')
+    split_array2.each do |item|
+      if item == "F"
+        item.replace("Female")
+      elsif item == "M"
+        item.replace("Male")
+      end 
+    end
     csv_array << split_array2
   end
 
