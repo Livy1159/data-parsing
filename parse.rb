@@ -1,5 +1,7 @@
 require 'csv'
 
-CSV.open('file1.csv', 'r') do |row|
+csv = CSV.read('file2.csv', headers: false)
+
+csv.each do |row|
   p row
 end
