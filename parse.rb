@@ -48,10 +48,24 @@ def create_array
     swap(row, 3, 4)
     csv_array << row
   end
-  p csv_array
+  csv_array
 end
 
-create_array
+# def output_1
+#   csv_array = create_array
+#   i = 0
+#   while i < csv_array.length
+#     csv_array.each do |array|
+#       if array.include?("Female")
+#         csv_array.unshift(array)
+#       end
+#     end
+#     i += 1  
+#   end
+#   p csv_array
+# end
+
+# output_1
 
 
 
